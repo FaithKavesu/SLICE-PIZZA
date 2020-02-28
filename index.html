@@ -2,8 +2,79 @@
 <html>
   <head>
     <title>SLICE PIZZA</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+      <div class = "container">
+          <h1>SLICE PIZZA</h1>
+          <p>WHERE EVERY SLICE COUNTS</p>
+
+          <h2>ABOUT US</h2>
+          <p>
+            Slice Pizza - Slice Pizza is not only proud to be Kenya's Favorite Pizza, but also the leading pizza restaurant in Africa. 
+            Our innovation and creativity has enabled us to offer the widest range of pizzas allowing our customers to choose from our range of classic, favorite, signature and something special pizzas. Our pizzas are made with thin crusts, lots of toppings, and the perfect blend of sauces.
+            Slice Pizza gives each and every customer quality and value for their money. But, that’s not all. We also offer great side orders like potato wedges, chicken wings and pop-itz. And of course, we have our unforgettable hot subs - a French baguette filled with mozzarella cheese and toppings of your choice.
+             Slice Pizza - Where Every Slice Counts.
+          </p>
+          <h3>MENU</h3>
+          <p>
+              <h4>MEAT</h4>
+              <ul>
+                  <li>
+                      BEEF STEAK
+                      HAWAIIAN
+                      MEXICAN FIESTA
+                      CLUB
+                  </li>
+              </ul>
+                  <h5>CHICKEN</h5>
+                  <ul>
+                      <li>
+                      TIKKA CHICKEN 
+                      SWEET CHILLI CHICKEN
+                      BBQ CHICKEN
+                      PERI PERI CHICKEN
+                      </li>
+                  </ul>
+                  <h6>VEGETERIAN</h6>
+                  <ul>
+                      <li>
+                      SEASONAL VEGGIE
+                      RED HOT VEGGIE
+                      CLASSIC MARGHERITA
+                      </li>
+                      </ul>
+          </p>
+          
+          <div class="order">
+            <h7>ORDER</h7>
+                <form id="form">
+                    <div class="form-group " onsubmit="res()">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="text1"></div>
+                                <input type="checkbox" placeholder="PIZZA SIZE" id="size">
+                                <label for="radio" class="radio-inline">
+                                    <input type="radio" value="large" name="large" id="large" required />
+                                    Large </label><br />
+                                <label for="radio" class="radio-inline">
+                                    <input type="radio" value="medium" name="medium" id="medium" required />
+                                    Medium
+                                </label>
+                                <label for="radio" class="radio-inline">
+                                    <input type="radio" value="small" name="small" id="small" required />
+                                    Small </label>
+
+                            </div>
+                        <button type="button" onclick="response()" class="btn btn-outline-primary" id="btnn">submit</button>
+                    </div>
+            </div>
+        </div>
+
+        </form>
+          
+      </div>
 
   </body>
 </html>
