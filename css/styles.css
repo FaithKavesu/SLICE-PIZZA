@@ -1,12 +1,15 @@
-#aboutus {
-    display: none;
+.work {
+    background-image: url(../images/download.jpeg);
+    background-size: cover;
+    padding-top: 200px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px; 
 }
-#menu{
-    display: none;
+ nav li{
+    display: inline-block;
+    margin-right: 20px;
 }
-#order {
-    display: none;
-}
-#contact {
-    display: none;
+nav{
+    text-align: right;
 }
