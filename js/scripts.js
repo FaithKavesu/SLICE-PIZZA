@@ -30,10 +30,20 @@ order.prototype.cost = function() {
         this.price += 200;
     } else if (this.topping === pizzatopping[2]) {
         this.price += 200;
-    }
+    } else if (this.topping === pizzatopping[3]) {
+        this.price += 200;
+    } else if (this.topping === pizzatopping[4]) {
+        this.price += 200;    
+    } else if (this.topping === pizzatopping[5]) {
+        this.price += 200;
+    } else if (this.topping === pizzatopping[6]) {
+        this.price += 200;
+    } else if (this.topping === pizzatopping[7]) {
+        this.price += 200;
+    }     
     return this.price;
 }
-order.prototype.totalCost = function() {
+order.prototype.total = function() {
     var orderTotal = 0;
     for (var order = 0; order < totalCosts.length; order++) {
         orderTotal += totalCosts[order];
@@ -52,7 +62,7 @@ $(document).ready(function() {
         $("#size").text(sizes);
         $("#crust").text(crusts);
         $("#topping").text(toppings);
-        $("#total").text(newPizzaOrder.totalCost());
+        $("#total").text(newPizzaOrder.total());
     });
     $("#order2").click(function() {
         prompt("Kindly insert you name")
@@ -65,12 +75,12 @@ $(document).ready(function() {
 function validate() {
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
-    var text = document.getElementById("text").value;
+    var message = document.getElementById("message").value;
     if (name === "") {
         alert("Please write your name!");
     } else if (email === "") {
         alert("Please write your name!");
-    } else if (text === "") {
+    } else if (message === "") {
         alert("Please write a message");
     } else {
         alert("We have recieved  your message dear " + name + ", " + " thank you for getting in touch with us");

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CONTACT US</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="order.html">ORDER</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="contact">
+        <h9>CONTACT US</h9>
+        <div id="form">
+            <form id="form">
+                <div class="form-group " onsubmit="validate()">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="text1"></div>
+                            <input type="text" placeholder="Name..." id="name">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" placeholder="Email..." id="email">
+                        </div>
+                        <div class="col-md-6">
+                            <textarea id="message" name="subject" placeholder="Your message here..."style="height:200px"></textarea>
+
+                        </div>
+                    </div>
+                    <button type="button" onclick="validate()" class="btn btn-outline-primary" id="btnn">submit</button>
+
+  </body>
+</html>
