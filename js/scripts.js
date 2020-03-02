@@ -24,21 +24,21 @@ order.prototype.cost = function() {
     } else if (this.crust === pizzaCrust[2]) {
         this.price += 50;
     }
-    if (this.topping === pizzatopping[0]) {
+    if (this.topping === topping[0]) {
         this.price += 200;
-    } else if (this.topping === pizzatopping[1]) {
+    } else if (this.topping === topping[1]) {
         this.price += 200;
-    } else if (this.topping === pizzatopping[2]) {
+    } else if (this.topping === topping[2]) {
         this.price += 200;
-    } else if (this.topping === pizzatopping[3]) {
+    } else if (this.topping === topping[3]) {
         this.price += 200;
-    } else if (this.topping === pizzatopping[4]) {
+    } else if (this.topping === topping[4]) {
         this.price += 200;    
-    } else if (this.topping === pizzatopping[5]) {
+    } else if (this.topping === topping[5]) {
         this.price += 200;
-    } else if (this.topping === pizzatopping[6]) {
+    } else if (this.topping === topping[6]) {
         this.price += 200;
-    } else if (this.topping === pizzatopping[7]) {
+    } else if (this.topping === topping[7]) {
         this.price += 200;
     }     
     return this.price;
@@ -53,23 +53,23 @@ order.prototype.total = function() {
 $(document).ready(function() {
     $("input#order1").click(function(event) {
         event.preventDefault();
-        var sizes = $("select#size").val();
-        var crusts = $("select#crust").val();
-        var toppings = $("select#topping").val();
-        var newPizzaOrder = new order(sizes, crust, toppings);
+        var size = $("select#size").val();
+        var crust = $("select#crust").val();
+        var topping = $("select#topping").val();
+        var newPizzaOrder = new order(sizes, crust, topping);
         newPizzaOrder.cost();
-        totalCosts.push(newPizzaOrder.price);
-        $("#size").text(sizes);
-        $("#crust").text(crusts);
-        $("#topping").text(toppings);
+        total.push(newPizzaOrder.price);
+        $("#size").text(size);
+        $("#crust").text(crust);
+        $("#topping").text(topping);
         $("#total").text(newPizzaOrder.total());
     });
     $("#order2").click(function() {
         prompt("Kindly insert you name")
         prompt("kindly insert you location")
         prompt("Kindly insert your addrress")
-        alert("You will be charged an extra 1.5$ for delivery")
-        alert("Thank you for purchasing from KILITASHA PIZZA INN!Your order will be delivered to your location :pizza: :truck: in the next 30 minutes")
+        alert("You will be charged an extra KES.100 for delivery")
+        alert("Thank you for purchasing from SLICE PIZZA!Your order will be delivered to your location :pizza: :truck: in the next 30 minutes")
     });
 })
 function validate() {
