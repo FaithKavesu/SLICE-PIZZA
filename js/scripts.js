@@ -1,14 +1,14 @@
-var total = [];
+var totalCost = [];
 
 function order(size, crust, topping) {
-    this.size = size;
-    this.crust = crust;
-    this.topping = topping;
+    this.pizzaSize = size;
+    this.pizzaCrust = crust;
+    this.pizzaTopping = topping;
     this.price = 0;
 }
 var pizzaSize = ["Small", "Medium", "Large"];
 var pizzaCrust = ["Crispy", "Stuffed", "Gluten-free"];
-var topping = ["Pepperoni", "Mushrooms", "Onions", "Sausage","Bacon","Extra Cheese","Black Olives","Green Peppers" ];
+var pizzaTopping = ["Pepperoni", "Mushrooms", "Onions", "Sausage","Bacon","Extra Cheese","Black Olives","Green Peppers" ];
 order.prototype.cost = function() {
     if (this.size === pizzaSize[0]) {
         this.price += 450;
@@ -26,29 +26,30 @@ order.prototype.cost = function() {
     }
     if (this.topping === topping[0]) {
         this.price += 200;
-    } else if (this.topping === topping[1]) {
+    } else if (this.topping === pizzaTopping[1]) {
         this.price += 200;
-    } else if (this.topping === topping[2]) {
+    } else if (this.topping === pizzaTopping[2]) {
         this.price += 200;
-    } else if (this.topping === topping[3]) {
+    } else if (this.topping === pizzaTopping[3]) {
         this.price += 200;
-    } else if (this.topping === topping[4]) {
+    } else if (this.topping === pizzaTopping[4]) {
         this.price += 200;    
-    } else if (this.topping === topping[5]) {
+    } else if (this.topping === pizzaTopping[5]) {
         this.price += 200;
-    } else if (this.topping === topping[6]) {
+    } else if (this.topping === pizzaTopping[6]) {
         this.price += 200;
-    } else if (this.topping === topping[7]) {
+    } else if (this.topping === pizzaTopping[7]) {
         this.price += 200;
     }     
     return this.price;
 }
-order.prototype.total = function() {
+order.prototype.totalCost = function() {
     var orderTotal = 0;
-    for (var order = 0; order < totalCosts.length; order++) {
-        orderTotal += totalCosts[order];
+    for (var order = 0; order < totalCost.length; order++) {
+        orderTotal += total[order];
     }
     return orderTotal;
+
 }
 $(document).ready(function() {
     $("input#order1").click(function(event) {
@@ -56,13 +57,13 @@ $(document).ready(function() {
         var size = $("select#size").val();
         var crust = $("select#crust").val();
         var topping = $("select#topping").val();
-        var newPizzaOrder = new order(sizes, crust, topping);
+        var newPizzaOrder = new order(size, crust, topping);
         newPizzaOrder.cost();
         total.push(newPizzaOrder.price);
         $("#size").text(size);
         $("#crust").text(crust);
         $("#topping").text(topping);
-        $("#total").text(newPizzaOrder.total());
+        $("#total").text(newPizzaOrder.totalCost());
     });
     $("#order2").click(function() {
         prompt("Kindly insert you name")

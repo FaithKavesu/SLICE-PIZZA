@@ -19,7 +19,7 @@
         <h7>ORDER</h7>
             <form id="form">
                 <div class="form-group " onsubmit="order()">
-                    <div class = "size">
+                    <div id = "size">
                     <div class="row">
                         <div class="col-md-12">
                             <label for="radio" class="radio-inline">
@@ -35,51 +35,7 @@
                                 Small </label></div>
                     </div>
                 </div>
-                        <h9>PIZZA</h9>
-                        <h10>MEAT</h10>
-                        <div class="row">
-                        <div class="col-md-6">
-                            <label for="radio" class="radio-inline">
-                            <input type="radio" value="BEEF STEAK" name="BEEF STEAK" id="BEEF STEAK" required/>BEEF STEAK</label></div>
-                        <div class="col-md-6">
-                            <label for="radio" class="radio-inline">
-                            <input type="radio" value="HAWAIIAN" name="HAWAIIAN" id="HAWAIIAN" required/>HAWAIIAN</label></div>
-                        <div class="col-md-6">
-                            <label for="radio" class="radio-inline">
-                            <input type="radio" value="MEXICAN FIESTA" name="MEXICAN FIESTA" id="MEXICAN FIESTA" required/>MEXICAN FIESTA</label></div>
-                        <div class="col-md-6">
-                            <label for="radio" class="radio-inline">
-                            <input type="radio" value="CLUB" name="CLUB" id="CLUB" required/>CLUB</label></div>
-                        </div>
-                            <h11>CHICKEN</h11>
-                        <div class="row">
-                        <div class="col-md-6">
-                            <label for="radio" class="radio-inline">
-                            <input type="radio" value="TIKKA CHICKEN" name="TIKKA CHICKEN" id="TIKKA CHICKEN" required/>TIKKA CHICKEN</label></div>
-                        <div class="col-md-6">
-                            <label for="radio" class="radio-inline">
-                            <input type="radio" value="SWEET CHILLI CHICKEN" name="SWEET CHILLI CHICKEN" id="SWEET CHILLI CHICKEN" required/>SWEET CHILLI CHICKEN</label></div>
-                        <div class="col-md-6">
-                            <label for="radio" class="radio-inline">
-                            <input type="radio" value="BBQ CHICKEN" name="BBQ CHICKEN" id="BBQ CHICKEN" required/>BBQ CHICKEN</label></div>
-                        <div class="col-md-6">
-                            <label for="radio" class="radio-inline">
-                            <input type="radio" value="PERI PERI CHICKEN" name="PERI PERI CHICKEN" id="PERI PERI CHICKEN" required/>PERI PERI CHICKEN</label></div>
-                        </div>
-                            <h12>VEGETERIAN</h12>
-                            <div class="row">
-                            <div class="col-md-6">
-                                <label for="radio" class="radio-inline">
-                                <input type="radio" value="SEASONAL VEGGIE" name="SEASONAL VEGGIE" id="SEASONAL VEGGIE" required/>SEASONAL VEGGIE</label></div>
-                                <div class="col-md-6">
-                                    <label for="radio" class="radio-inline">
-                                    <input type="radio" value="RED HOT VEGGIE" name="RED HOT VEGGIE" id="RED HOT VEGGIE" required/>PERI PERI CHICKEN</label></div>
-                                    <div class="col-md-6">
-                                        <label for="radio" class="radio-inline">
-                                        <input type="radio" value="CLASSIC MARGHERITA" name="CLASSIC MARGHERITA" id="CLASSIC MARGHERITA" required/>CLASSIC MARGHERITA</label></div>    
-                    </div>
-                </div>
-                <div class="topping">
+                <div id="topping">
                 <h8>TOPPINGS</h8>
             <div class="row">
             <div class="col-md-6">
@@ -108,7 +64,7 @@
             <input type="radio" value="Green Peppers" name="Green Peppers" id="Green Peppers" required />Green Peppers</label></div>
         </div>
             </div>
-            <div class="crust">
+            <div id ="crust">
                 <h9>CRUST</h9>
                 <div class="row">
                     <div class="col-md-6">
@@ -120,11 +76,14 @@
                         <div class="col-md-6">
                             <label for="radio" class="radio-inline">
                             <input type="radio" value="Gluten-free" name="Gluten-free" id="Gluten-free" required />Gluten-free</label></div>
-            <button type="button" onclick="order()" class="btn btn-outline-primary" id="order2">ORDER</button>
-    </div>
-    <div>
-        
-    </div>
+            <button type="button" onclick="order()" class="btn btn-outline-primary" id="order2">ORDER</button></div>
+        <div class="col-md-6">
+            <div id="total"></div>
+            <label for="radio" class="radio-inline">
+                <output type="text" value="total" name="total" id="total" required />TOTAL</label></div>
+                <button type="button" onclick="total()" class="btn btn-outline-primary" id="total">TOTAL</button></div>
+            </div>
+</div>
      </form>
     <script src="js/jquery-3.4.1.js"></script>
           <script src="js/scripts.js"></script>
