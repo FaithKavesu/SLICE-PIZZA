@@ -18,21 +18,21 @@
     <div id="order">
         <h7>ORDER</h7>
             <form id="form">
-                <div class="form-group " onsubmit="order()">
+                <div class="form-group " onsubmit="getCost();">
                     <div id = "size">
                     <div class="row">
                         <div class="col-md-12">
                             <label for="radio" class="radio-inline">
                                 <input type="radio" value="Large" name="Large" id="Large" required />
-                                Large </label></div>
+                                Large@Ksh.1000 </label></div>
                                 <div class="col-md-12">
                             <label for="radio" class="radio-inline">
                                 <input type="radio" value="Medium" name="Medium" id="Medium" required />
-                                Medium </label></div>
+                                Medium@Ksh.600 </label></div>
                                 <div class="col-md-12">
                             <label for="radio" class="radio-inline">
                                 <input type="radio" value="Small" name="Small" id="Small" required />
-                                Small </label></div>
+                                Small@Ksh.350 </label></div>
                     </div>
                 </div>
                 <div id="topping">
@@ -40,28 +40,28 @@
             <div class="row">
             <div class="col-md-6">
             <label for="radio" class="radio-inline">
-            <input type="radio" value="Pepperoni" name="Pepperoni" id="Pepperoni" required />Pepperoni</label></div>
+            <input type="radio" value="Pepperoni" name="Pepperoni" id="Pepperoni" required />Pepperoni@Ksh.200</label></div>
             <div class="col-md-6">
             <label for="radio" class="radio-inline">
-            <input type="radio" value="Mushrooms" name="Mushrooms" id="Mushrooms" required />Mushrooms</label></div>
+            <input type="radio" value="Mushrooms" name="Mushrooms" id="Mushrooms" required />Mushrooms@Ksh.200</label></div>
             <div class="col-md-6">
             <label for="radio" class="radio-inline">
-            <input type="radio" value="Onions" name="Onions" id="Onions" required />Onions</label></div>
+            <input type="radio" value="Onions" name="Onions" id="Onions" required />Onions@Ksh.200</label></div>
             <div class="col-md-6">
             <label for="radio" class="radio-inline">
-            <input type="radio" value="Sausage" name="Sausage" id="Sausage" required />Sausage</label></div>
+            <input type="radio" value="Sausage" name="Sausage" id="Sausage" required />Sausage@Ksh.200</label></div>
             <div class="col-md-6">
             <label for="radio" class="radio-inline">
-            <input type="radio" value="Bacon" name="Bacon" id="Bacon" required />Bacon</label></div>
+            <input type="radio" value="Bacon" name="Bacon" id="Bacon" required />Bacon@Ksh.200</label></div>
             <div class="col-md-6">
             <label for="radio" class="radio-inline">
-            <input type="radio" value="Extra Cheese" name="Extra Cheese" id="Extra Cheese" required/>Extra Cheese</label></div>
+            <input type="radio" value="Extra Cheese" name="Extra Cheese" id="Extra Cheese" required/>Extra Cheese@Ksh.200</label></div>
             <div class="col-md-6">
             <label for="radio" class="radio-inline">
-            <input type="radio" value="Black Olives" name="Black Olives" id="Black Olives" required />Black Olives</label></div>
+            <input type="radio" value="Black Olives" name="Black Olives" id="Black Olives" required />Black Olives@Ksh.200</label></div>
             <div class="col-md-6">
             <label for="radio" class="radio-inline">
-            <input type="radio" value="Green Peppers" name="Green Peppers" id="Green Peppers" required />Green Peppers</label></div>
+            <input type="radio" value="Green Peppers" name="Green Peppers" id="Green Peppers" required />Green Peppers@Ksh.200</label></div>
         </div>
             </div>
             <div id ="crust">
@@ -69,15 +69,16 @@
                 <div class="row">
                     <div class="col-md-6">
                     <label for="radio" class="radio-inline">
-                    <input type="radio" value="Crust" name="Crust" id="Crust" required />Crust</label></div>
+                    <input type="radio" value="Crust" name="Crust" id="Crust" required />Crust@Ksh.350</label></div>
                     <div class="col-md-6">
                         <label for="radio" class="radio-inline">
-                        <input type="radio" value="Stuffed" name="Stuffed" id="Stuffed" required />Stuffed</label></div>
+                        <input type="radio" value="Stuffed" name="Stuffed" id="Stuffed" required />Stuffed@Ksh.350</label></div>
                         <div class="col-md-6">
                             <label for="radio" class="radio-inline">
-                            <input type="radio" value="Gluten-free" name="Gluten-free" id="Gluten-free" required />Gluten-free</label></div>
-            <button type="button" onclick="order()" class="btn btn-outline-primary" id="order2">Order</button></div>
-            </div>
+                            <input type="radio" value="Gluten-free" name="Gluten-free" id="Gluten-free" required />Gluten-free@Ksh.350</label></div>
+                                <label>QUANTITY</label>
+                                <input type="number" value="number" id="number" placeholder="quantity">
+            <button type="button" onclick="getCost();" class="btn btn-success checkout" id="order">Order</button></div>
 </div>
      </form>
     <script src="js/jquery-3.4.1.js"></script>
