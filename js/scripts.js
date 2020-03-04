@@ -45,7 +45,7 @@ order.prototype.cost = function() {
 }
 order.prototype.totalCost = function() {
     var orderTotal = 0;
-    for (var order = 0; order < totalCost.length; order++) {
+    for (var order = 0; order < totalCost; order++) {
         orderTotal += total[order];
     }
     return orderTotal;
@@ -70,6 +70,7 @@ $(document).ready(function() {
         prompt("kindly insert you location")
         prompt("Kindly insert your addrress")
         alert("You will be charged an extra KES.100 for delivery")
+        alert("your bill is" + newPizzaOrder.cost + "delivery cost")
         alert("Thank you for purchasing from SLICE PIZZA!Your order will be delivered to your location :pizza: :truck: in the next 30 minutes")
     });
 })
