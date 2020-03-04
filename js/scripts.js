@@ -1,14 +1,13 @@
-var totalCost = [];
-
+var totalCosts = [];
 function order(size, crust, topping) {
-    this.pizzaSize = size;
-    this.pizzaCrust = crust;
-    this.pizzaTopping = topping;
+    this.size = size;
+    this.crust = crust;
+    this.topping = topping;
     this.price = 0;
 }
-var pizzaSize = ["Small", "Medium", "Large"];
+var pizzaSize = ["Large", "Medium", "Small"];
 var pizzaCrust = ["Crispy", "Stuffed", "Gluten-free"];
-var pizzaTopping = ["Pepperoni", "Mushrooms", "Onions", "Sausage","Bacon","Extra Cheese","Black Olives","Green Peppers" ];
+var pizaTopping = ["Pepperoni", "Mushrooms", "Onions","Sausage","Bacon","Extra Cheese","Black Olives","Green Peppers" ];
 order.prototype.cost = function() {
     if (this.size === pizzaSize[0]) {
         this.price += 450;
@@ -24,45 +23,44 @@ order.prototype.cost = function() {
     } else if (this.crust === pizzaCrust[2]) {
         this.price += 50;
     }
-    if (this.topping === topping[0]) {
-        this.price += 200;
+    if (this.topping === pizzaTopping[0]) {
+        this.price += 300;
     } else if (this.topping === pizzaTopping[1]) {
-        this.price += 200;
+        this.price += 300;
     } else if (this.topping === pizzaTopping[2]) {
-        this.price += 200;
+        this.price += 300;
     } else if (this.topping === pizzaTopping[3]) {
         this.price += 200;
     } else if (this.topping === pizzaTopping[4]) {
-        this.price += 200;    
+        this.price += 200;
     } else if (this.topping === pizzaTopping[5]) {
         this.price += 200;
     } else if (this.topping === pizzaTopping[6]) {
         this.price += 200;
     } else if (this.topping === pizzaTopping[7]) {
         this.price += 200;
-    }     
+    }
     return this.price;
 }
 order.prototype.totalCost = function() {
     var orderTotal = 0;
-    for (var order = 0; order < totalCost; order++) {
-        orderTotal += total[order];
+    for (var order = 0; order < totalCosts.length; order++) {
+        orderTotal += totalCosts[order];
     }
     return orderTotal;
-
 }
 $(document).ready(function() {
     $("input#order1").click(function(event) {
         event.preventDefault();
-        var size = $("select#size").val();
-        var crust = $("select#crust").val();
-        var topping = $("select#topping").val();
-        var newPizzaOrder = new order(size, crust, topping);
+        var sizes = $("select#size").val();
+        var crusts = $("select#crust").val();
+        var toppings = $("select#topping").val();
+        var newPizzaOrder = new order(sizes, crusts, toppings);
         newPizzaOrder.cost();
-        total.push(newPizzaOrder.price);
-        $("#size").text(size);
-        $("#crust").text(crust);
-        $("#topping").text(topping);
+        totalCosts.push(newPizzaOrder.price);
+        $("#size").text(sizes);
+        $("#crust").text(crusts);
+        $("#topping").text(toppings);
         $("#total").text(newPizzaOrder.totalCost());
     });
     $("#order2").click(function() {
@@ -70,8 +68,8 @@ $(document).ready(function() {
         prompt("kindly insert you location")
         prompt("Kindly insert your addrress")
         alert("You will be charged an extra KES.100 for delivery")
-        alert("your bill is" + newPizzaOrder.cost + "delivery cost")
-        alert("Thank you for purchasing from SLICE PIZZA!Your order will be delivered to your location :pizza: :truck: in the next 30 minutes")
+        alert("Thank you for purchasing from SLICE-PIZZA!Your order will be delivered to your location in the next 30 minutes")
+        alert("Your total is")
     });
 })
 function validate() {
