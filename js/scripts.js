@@ -61,3 +61,17 @@ $(document).ready(function () {
 
   });
 })
+function validate() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+  if (name === "") {
+      alert("Please write your name!");
+  } else if (email === "") {
+      alert("Please write your name!");
+  } else if (message === "") {
+      alert("Please write a message");
+  } else {
+      alert("We have recieved  your message dear " + name + ", " + " thank you for getting in touch with us");
+  };
+}
